@@ -1,10 +1,15 @@
 #include<stdio.h>
-int main ()
+int add()
 {
-  int a,b,c;
-  printf("enter the two numbers\n");
-  scanf("%d%d",&a,&b);
-  c=a+b;
-printf("%d+%d=%d\n",a,b,c);
-return 0;
+  float a,b;
+  printf("Enter 2 numbers\n");
+  scanf("%f%f",&a,&b);
+  float sum=a+b;
+  printf("%f",sum);
+  return 0;
+}
+int main()
+{
+  add();
+  return 0;
 }
