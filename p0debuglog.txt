@@ -1,4 +1,4 @@
- gdb a.out
+gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
 Copyright (C) 2018 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
@@ -14,9 +14,20 @@ Find the GDB manual and other documentation resources online at:
 For help, type "help".
 Type "apropos word" to search for commands related to "word"...
 Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x63e: file p0original.c, line 4.
 (gdb) r
-Starting program: /home/runner/pps-test1-Surya-12/a.out 
+Starting program: /home/runner/pps-test1-Surya-14/a.out 
 warning: Error disabling address space randomization: Operation not permitted
+
+Breakpoint 1, main () at p0original.c:4
+4   printf("hello world\n");
+(gdb) n
 hello world
+5   printf("JAANU\n");
+(gdb) n
 JAANU
-[Inferior 1 (process 106) exited normally]
+7   return 0;
+(gdb) c
+Continuing.
+[Inferior 1 (process 96) exited normally]
