@@ -1,14 +1,4 @@
-gcc -g p2original.c
- ./a.out
-enter a number
-5
-enter a number
-5
-Sum of 5+ 5 is 10
- gdb -g p2original.c
-gdb: unrecognized option '-g'
-Use `gdb --help' for a complete list of options.
- gdb a.out
+gdb a.out
 GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
 Copyright (C) 2018 Free Software Foundation, Inc.
 License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
@@ -27,17 +17,24 @@ Reading symbols from a.out...done.
 (gdb) b main
 Breakpoint 1 at 0x810: file p2original.c, line 21.
 (gdb) r
-Starting program: /home/runner/pps-test1-Surya-5/a.out 
+Starting program: /home/runner/pps-test1-Surya-14/a.out 
 warning: Error disabling address space randomization: Operation not permitted
 
 Breakpoint 1, main () at p2original.c:21
 21    x=input();
-(gdb) 
+(gdb) n
+enter a number
+6
+22    y=input();
+(gdb) n
+enter a number
+4
+23    z=find_sum(x,y);
+(gdb) n
+24    output(x,y,z);
+(gdb) n
+Sum of 6+ 4 is 10
+25    return 0;
 (gdb) c
 Continuing.
-enter a number
-7
-enter a number
-9
-Sum of 7+ 9 is 16
-[Inferior 1 (process 332) exited normally]
+[Inferior 1 (process 251) exited normally]
